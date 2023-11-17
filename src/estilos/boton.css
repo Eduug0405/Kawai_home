@@ -71,7 +71,7 @@
 }
 
 .form-container{
-    background-color: #fff;
+    background-color: #ff0808;
     font-family: 'Titillium Web', sans-serif;
     font-size: 0;
     padding: 30px;
@@ -207,4 +207,24 @@
         width: 100%;
         margin: 0 10px 15px;
     }
+}
+
+
+.form-update{
+    background-color: #aeaefc;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 0;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px -15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.update-title{
+    color: #000;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 25px;
 }

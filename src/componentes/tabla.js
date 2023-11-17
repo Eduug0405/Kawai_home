@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../estilos/tabla.css';
 import axios from "axios";
+import data from "bootstrap/js/src/dom/data";
 
 export default function Tabla() {
     const [productos, setProductos] = useState([]);
@@ -21,8 +22,14 @@ export default function Tabla() {
         }
     };
 
-    const handleEliminar = (id) => {
-        console.log(`Eliminar elemento con ID: ${id}`);
+    const handleEliminar = async (id) => {
+        try {
+            const response = await axios.delete(`http://localhost:3000/productos/${id}`)
+             console.log(('Producto eliminado con exito'))
+            fetchData()
+        } catch (error){
+            console.log('No se pudo eliminar el producto')
+        }
     };
 
     const handleModificar = (id) => {
