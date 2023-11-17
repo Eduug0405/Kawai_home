@@ -12,12 +12,12 @@
 
 .custom {
     transform: translateY(-600px);
-    margin-left:400px;
+    margin-left:500px;
 }
 
 .cuerpo h5 {
     position: absolute; /* Cambia la posición a absoluta */
-    margin-top: 140px; /* Ajusta según tus necesidades */
+    margin-top: 240px; /* Ajusta según tus necesidades */
     left: 750px; /* Ajusta según tus necesidades */
     color: black;
     font-size: 30px;
