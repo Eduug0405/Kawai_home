@@ -32,9 +32,35 @@ export default function Tabla() {
         }
     };
 
-    const handleModificar = (id) => {
-        console.log(`Modificar elemento con ID: ${id}`);
+    const handleModificar = async (id, nuevoPrecio, nuevoNombre) => {
+        try {
+            const datosActualizar = {
+                nombre: nuevoNombre,
+                precio: nuevoPrecio
+            };
+
+            // Configura la solicitud con el método PATCH y el cuerpo JSON
+            const response = await fetch(`http://localhost:3000/productos/${id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datosActualizar)
+            });
+
+            // Verifica si la solicitud fue exitosa
+            if (response.ok) {
+                console.log("Producto actualizado exitosamente");
+                // Refresca los datos después de la actualización
+                fetchData();
+            } else {
+                console.error("Error al actualizar el producto:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Error al actualizar el producto:", error);
+        }
     };
+
 
     return (
         <div className="table">
@@ -49,7 +75,14 @@ export default function Tabla() {
                     <div className="table-cell">{item.precio}</div>
                     <div className="table-cell">
                         <button className="button-55" onClick={() => handleEliminar(item.id)}>Eliminar</button>
-                        <button className="button-55" onClick={() => handleModificar(item.id)}>Modificar</button>
+                        <button className="button-55" onClick={() => {
+                            const nuevoPrecio = prompt('Ingresa el nuevo precio:');
+                            const nuevoNombre = prompt('Ingresa el nuevo nombre:');
+                            if (nuevoPrecio !== null && nuevoNombre !== null) {
+                                handleModificar(item.id, nuevoPrecio, nuevoNombre);
+                            }
+                        }}>Modificar</button>
+
                     </div>
                 </div>
             ))}
