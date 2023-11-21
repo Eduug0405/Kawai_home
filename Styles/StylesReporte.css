@@ -1,13 +1,11 @@
 .cuerpo {
     background-color: #ffffff;
-height: 850px;
-position: relative;
 }
 
 .reportes{
     position: absolute;
-    margin-top: 140px;
-    left: 750px;
+    margin-top: 175px;
+    left: 660px;
     color: black;
     font-size: 30px;
     text-decoration: underline #fa8cef;
@@ -15,8 +13,8 @@ position: relative;
 
 .btn-pdf button{
     background-color: red;
-    margin-top: 310px;
-    margin-left: 700px;
+    margin-top: 265px;
+    margin-left: 600px;
     border-radius: 20px;
     width: 250px;
     height: 60px;
@@ -33,7 +31,7 @@ position: relative;
 
 .btn-stats button{
     background-color: #84b6ff;
-    margin-left: 880px;
+    margin-left: 800px;
     border-radius: 20px;
     width: 250px;
     height: 60px;
@@ -51,7 +49,7 @@ position: relative;
 
 .btn-gra button{
     background-color: #7fea94;
-    margin-left: 700px;
+    margin-left: 600px;
     border-radius: 20px;
     width: 250px;
     height: 60px;
@@ -79,6 +77,9 @@ position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
     box-sizing: border-box;
     padding: 16px 20px;
+    margin-left: 700px;
+    margin-top: 60px;
+    margin-bottom: 100px;
     color: #fff;
     font-size: 12px;
     font-weight: 600;

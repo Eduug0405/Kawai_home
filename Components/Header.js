@@ -5,7 +5,7 @@ const Header = () =>{
     return(
         <nav className="navbar">
             <div className="titulo">
-                <img src="/panda.jpg" alt="" className="logo"/>
+                <img src="/assets/panda_kawaii_home-removebg-preview%20(1)%20(2).png" alt="" className="logo"/>
             </div>
 
             <ul className="list">
